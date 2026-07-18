@@ -7,12 +7,12 @@ class Solution {
              if(nums[i]<mn)
             mn = nums[i];
         }
-        return gcd(mn,mx);
+        return gcd(mx,mn);
     }
     int gcd(int a,int b) {
-        int r = b%a;
+        int r = a%b;
         if(r==0)
-        return a;
-        return gcd(r,a);
+        return b;
+        return gcd(b,r);
     }
 }
